@@ -12,8 +12,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = scene as? UIWindowScene else { return }
-        
-        let usersViewController = UsersViewController()
+
+        let usersViewController = UsersModuleAssembly.build()
         let navigationController = UINavigationController(rootViewController: usersViewController)
 
         window = UIWindow(windowScene: windowScene)
