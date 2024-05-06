@@ -7,6 +7,9 @@
 
 import UIKit
 
+let usersManager = UsersCoreDataManager()
+let router = Router()
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
