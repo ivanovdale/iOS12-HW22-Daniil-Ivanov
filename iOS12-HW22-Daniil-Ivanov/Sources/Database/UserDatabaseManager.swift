@@ -7,13 +7,11 @@
 
 import CoreData
 
-// MARK: - Typealias
+typealias DatabaseActionClosure = (DatabaseAction?) -> Void
 
-typealias VoidClosure = () -> Void
+protocol UsersDatabaseManager {
+    var savedEntities: [User] { get set }
 
-// MARK: - Protocol
-
-protocol UserDatabaseManager {
     func fetchUsers()
 
     func addUser(name: String,
@@ -29,21 +27,20 @@ protocol UserDatabaseManager {
 
     func deleteUser(_ user: User)
 
-    var onChanged: VoidClosure? { get set }
+    var onChanged: DatabaseActionClosure? { get set }
 }
 
-// MARK: - Implementation
-
-final class UserCoreDataManager: UserDatabaseManager {
+final class UsersCoreDataManager: UsersDatabaseManager {
     private let container: NSPersistentContainer
+    private var currentAction: DatabaseAction?
     var savedEntities: [User] = []
-    var onChanged: VoidClosure?
+    var onChanged: DatabaseActionClosure?
 
     init() {
         container = NSPersistentContainer(name: "UserModel")
         container.loadPersistentStores { description, error in
             if let error {
-                print("Unable to load Database")
+                print("Unable to load Database, error \(error))")
             } else {
                 print("Database loaded")
             }
@@ -56,7 +53,6 @@ final class UserCoreDataManager: UserDatabaseManager {
 
         do {
             savedEntities = try container.viewContext.fetch(request)
-            onChanged?()
         } catch {
             print("Unable to load users, error: \(error.localizedDescription)")
         }
@@ -71,6 +67,7 @@ final class UserCoreDataManager: UserDatabaseManager {
         newUser.surname = surname
         newUser.birthday = birthday
         newUser.gender = gender
+        currentAction = .add
         saveData()
     }
 
@@ -83,11 +80,13 @@ final class UserCoreDataManager: UserDatabaseManager {
         user.surname = surname
         user.birthday = birthday
         user.gender = gender
+        currentAction = .update
         saveData()
     }
 
     func deleteUser(_ user: User) {
         container.viewContext.delete(user)
+        currentAction = .delete
         saveData()
     }
 
@@ -95,8 +94,14 @@ final class UserCoreDataManager: UserDatabaseManager {
         do {
             try container.viewContext.save()
             fetchUsers()
+            onChanged?(currentAction)
+            currentAction = nil
         } catch {
             print("Can not save data, error: \(error.localizedDescription)")
         }
     }
+}
+
+enum DatabaseAction {
+    case add, delete, update
 }
