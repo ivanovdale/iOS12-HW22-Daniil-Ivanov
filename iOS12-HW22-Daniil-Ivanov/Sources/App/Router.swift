@@ -13,4 +13,14 @@ final class Router {
     func setRootController(controller: UIViewController) {
         self.controller = controller
     }
+
+    func goToUserDetails(_ user: User) {
+        let userDetails = UserDetailsModuleAssembly.build(with: .init(user: user))
+
+        self.controller?.navigationController?.pushViewController(userDetails, animated: true)
+    }
+
+    func goBack() {
+        self.controller?.navigationController?.popViewController(animated: true)
+    }
 }
