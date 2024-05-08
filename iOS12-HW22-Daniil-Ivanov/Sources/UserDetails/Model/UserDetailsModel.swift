@@ -15,7 +15,6 @@ protocol UserDetailsModelProtocol {
                     surname: String,
                     birthday: Date,
                     gender: String)
-
     func getBirthdayRange() -> DateRange
 }
 

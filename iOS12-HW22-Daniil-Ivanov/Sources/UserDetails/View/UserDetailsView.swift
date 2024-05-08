@@ -13,9 +13,7 @@ protocol UserDetailsViewProtocol: AnyObject {
     // MARK: - Handlers
 
     var onBackButtonPressedHandler: (() -> Void)? { get set }
-
     var onEditSaveButtonPressedHandler: (() -> Void)? { get set }
-
     var onGenderChosenHandler: ((Gender) -> Void)? { get set }
 
     // MARK: - Gender values
@@ -29,23 +27,16 @@ protocol UserDetailsViewProtocol: AnyObject {
     // MARK: - UI update
 
     func updateNameSurnameTextField(data: String)
-
     func updateBirthdayDatePicker(data: Date)
-
     func updateGenderPicker(rowNumber: Int)
-
     func setGenderPickerStyle(isEditingMode: Bool)
-
     func lockFields()
-
     func unlockFields()
-
     func setEditSaveButtonStyle(isEditingMode: Bool)
 
     // MARK: - Fields value getters
 
     func getNameSurnameTextFieldText() -> String
-
     func getBirthdayDatePickerValue() -> Date
 
     // MARK: - Error alert
@@ -58,9 +49,7 @@ final class UserDetailsView: UIView {
     // MARK: - Handlers
 
     var onBackButtonPressedHandler: (() -> Void)?
-
     var onEditSaveButtonPressedHandler: (() -> Void)?
-
     var onGenderChosenHandler: ((Gender) -> Void)?
 
     // MARK: - Gender values

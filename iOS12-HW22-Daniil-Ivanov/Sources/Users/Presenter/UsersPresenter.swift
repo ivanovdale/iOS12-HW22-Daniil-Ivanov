@@ -9,11 +9,8 @@ import Foundation
 
 protocol UsersPresenterProtocol {
     var users: [User] { get }
-    
     func loadView(controller: UsersViewController, view: UsersViewProtocol)
-
     func deleteUser(_: User)
-
     func goToUserDetails(_ user: User)
 }
 

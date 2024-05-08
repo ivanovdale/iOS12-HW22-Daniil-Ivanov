@@ -17,15 +17,12 @@ protocol UsersViewProtocol: AnyObject {
     // MARK: - TableView Delegate and DataSource
 
     var usersTableViewDataSource: UITableViewDataSource? { get set }
-
     var usersTableViewDelegate: UITableViewDelegate? { get set }
 
     // MARK: - UI update
 
     func getTextFieldData() -> String
-
     func updateUsersTable()
-
     func clearTextField()
 }
 

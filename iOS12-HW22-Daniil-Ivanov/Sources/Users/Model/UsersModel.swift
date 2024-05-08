@@ -9,11 +9,8 @@ import Foundation
 
 protocol UsersModelProtocol {
     var users: [User] { get }
-
     func setOnUsersChangedHandler(_: DatabaseActionClosure?)
-
     func addUser(withName name: String)
-
     func deleteUser(_: User)
 }
 
