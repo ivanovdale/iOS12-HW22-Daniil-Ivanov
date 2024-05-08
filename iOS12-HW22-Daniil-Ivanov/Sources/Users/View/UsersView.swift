@@ -137,6 +137,13 @@ final class UsersView: UIView {
 
     private func setupView() {
         backgroundColor = .systemBackground
+        setupGestureRecognizer()
+    }
+
+    private func setupGestureRecognizer() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
+        gesture.cancelsTouchesInView = false
+        self.addGestureRecognizer(gesture)
     }
 }
 
@@ -164,5 +171,10 @@ private extension UsersView {
 
     @objc func onAddUserButtonTapped() {
         self.onAddUserHandler?()
+    }
+
+    @objc
+    func viewTapped(sender: UITapGestureRecognizer){
+        self.endEditing(true)
     }
 }
