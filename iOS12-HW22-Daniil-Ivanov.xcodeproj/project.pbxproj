@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001E2A082BEBD9D3005B2F1C /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 001E2A062BEBD9D3005B2F1C /* UserModel.xcdatamodeld */; };
 		00CEA66D2BEBCEBA00A63774 /* UsersCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CEA66C2BEBCEBA00A63774 /* UsersCoreDataManager.swift */; };
-		00CEA69C2BEBCED500A63774 /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00CEA6702BEBCED500A63774 /* UserModel.xcdatamodeld */; };
 		00CEA69D2BEBCED500A63774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00CEA6722BEBCED500A63774 /* Assets.xcassets */; };
 		00CEA69E2BEBCED500A63774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00CEA6742BEBCED500A63774 /* LaunchScreen.storyboard */; };
 		00CEA69F2BEBCED500A63774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CEA6772BEBCED500A63774 /* AppDelegate.swift */; };
@@ -46,13 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		001E2A072BEBD9D3005B2F1C /* iOS12_HW22_Daniil_Ivanov.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOS12_HW22_Daniil_Ivanov.xcdatamodel; sourceTree = "<group>"; };
 		00CEA6362BEBCE6E00A63774 /* iOS12-HW22-Daniil-Ivanov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS12-HW22-Daniil-Ivanov.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00CEA64F2BEBCE6F00A63774 /* iOS12-HW22-Daniil-IvanovTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS12-HW22-Daniil-IvanovTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00CEA66C2BEBCEBA00A63774 /* UsersCoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersCoreDataManager.swift; sourceTree = "<group>"; };
 		00CEA66E2BEBCED500A63774 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00CEA6722BEBCED500A63774 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00CEA6732BEBCED500A63774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		00CEA6762BEBCED500A63774 /* iOS12_HW22_Daniil_Ivanov.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOS12_HW22_Daniil_Ivanov.xcdatamodel; sourceTree = "<group>"; };
 		00CEA6772BEBCED500A63774 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00CEA6782BEBCED500A63774 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		00CEA6792BEBCED500A63774 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		00CEA6712BEBCED500A63774 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				00CEA6702BEBCED500A63774 /* UserModel.xcdatamodeld */,
+				001E2A062BEBD9D3005B2F1C /* UserModel.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -412,12 +412,12 @@
 				00CEA6A92BEBCED500A63774 /* UserDetailsModel.swift in Sources */,
 				00CEA6B22BEBCED500A63774 /* UsersView.swift in Sources */,
 				00CEA6B12BEBCED500A63774 /* UsersPresenter.swift in Sources */,
+				001E2A082BEBD9D3005B2F1C /* UserModel.xcdatamodeld in Sources */,
 				00CEA6AC2BEBCED500A63774 /* UserDetailsViewController.swift in Sources */,
 				00CEA6AF2BEBCED500A63774 /* Gender.swift in Sources */,
 				00CEA6AE2BEBCED500A63774 /* RandomDataGenerator.swift in Sources */,
 				00CEA6A32BEBCED500A63774 /* User+CoreDataProperties.swift in Sources */,
 				00CEA6AA2BEBCED500A63774 /* UserDetailsPresenter.swift in Sources */,
-				00CEA69C2BEBCED500A63774 /* UserModel.xcdatamodeld in Sources */,
 				00CEA6B02BEBCED500A63774 /* UsersModel.swift in Sources */,
 				00CEA6A52BEBCED500A63774 /* UIPickerView+Ext.swift in Sources */,
 				00CEA6A72BEBCED500A63774 /* User+Ext.swift in Sources */,
@@ -743,14 +743,14 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		00CEA6702BEBCED500A63774 /* UserModel.xcdatamodeld */ = {
+		001E2A062BEBD9D3005B2F1C /* UserModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				00CEA6762BEBCED500A63774 /* iOS12_HW22_Daniil_Ivanov.xcdatamodel */,
+				001E2A072BEBD9D3005B2F1C /* iOS12_HW22_Daniil_Ivanov.xcdatamodel */,
 			);
-			currentVersion = 00CEA6762BEBCED500A63774 /* iOS12_HW22_Daniil_Ivanov.xcdatamodel */;
+			currentVersion = 001E2A072BEBD9D3005B2F1C /* iOS12_HW22_Daniil_Ivanov.xcdatamodel */;
 			name = UserModel.xcdatamodeld;
-			path = "/Users/daniilwork/Desktop/iOS12-HW22-Daniil-Ivanov/iOS12-HW22-Daniil-Ivanov/Resources/CoreData/UserModel.xcdatamodeld";
+			path = "/Users/daniilwork/XCodeProjects/iOS12-HW22-Daniil-Ivanov/iOS12-HW22-Daniil-Ivanov/Resources/CoreData/UserModel.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
